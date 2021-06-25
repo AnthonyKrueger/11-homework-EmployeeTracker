@@ -1,0 +1,39 @@
+GET http://localhost:3001/api/questions
+
+
+
+###
+
+POST http://localhost:3001/api/employees
+Content-Type: application/json
+
+{
+    "firstName": "Anthony",
+    "lastName": "Krueger",
+    "roleId": 1
+}
+
+
+
+###
+
+POST http://localhost:3001/api/departments
+Content-Type: application/json
+
+{
+    "name": "Managers"
+}
+
+
+###
+
+
+POST http://localhost:3001/api/roles
+Content-Type: application/json
+
+{
+    "title": "Worker",
+    "salary": 50000,
+    "departmentId": 1
+}
+
