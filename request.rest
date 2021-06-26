@@ -13,6 +13,16 @@ Content-Type: application/json
     "roleId": 1
 }
 
+###
+
+POST http://localhost:3001/api/employees/updateRole
+Content-Type: application/json
+
+{
+    "employeeId": 2,
+    "roleId": 6
+}
+
 
 
 ###
@@ -34,6 +44,12 @@ Content-Type: application/json
 {
     "title": "Worker",
     "salary": 50000,
-    "departmentId": 1
+    "departmentId": 2
 }
+
+
+###
+
+DELETE http://localhost:3001/api/roles/1
+
 

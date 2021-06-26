@@ -1,7 +1,7 @@
 const sequelize = require("../config/config.js")
 const {DataTypes} = require("sequelize");
 
-const Department = sequelize.define("Department", {
+const Department = sequelize.define("department", {
     name: {
         type: DataTypes.STRING,
         allownull: false
@@ -15,7 +15,7 @@ const Department = sequelize.define("Department", {
 })
 
 
-const Role = sequelize.define("Role", {
+const Role = sequelize.define("role", {
     title: {
         type: DataTypes.STRING,
         allownull: false
@@ -31,7 +31,7 @@ const Role = sequelize.define("Role", {
     }
 })
 
-const Employee = sequelize.define("Employee", {
+const Employee = sequelize.define("employee", {
     firstName: {
         type: DataTypes.STRING,
         allownull: false
@@ -48,13 +48,27 @@ const Employee = sequelize.define("Employee", {
 
 })
 
-Employee.belongsTo(Role, {
-    foreignKey: "roleId",
+
+Department.hasMany(Role, {
+    foreignKey: 'departmentId',
+    onDelete: 'cascade'
 })
 
 Role.belongsTo(Department, {
-    foreignKey: "departmentId"
+    foreignKey: "departmentId",
+    onDelete: 'cascade'
 })
+
+Role.hasMany(Employee, {
+    foreignKey: 'roleId',
+    onDelete: 'cascade'
+})
+
+Employee.belongsTo(Role, {
+    foreignKey: "roleId",
+    onDelete: 'cascade'
+})
+
 
 
 
