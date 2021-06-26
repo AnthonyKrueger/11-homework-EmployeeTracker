@@ -98,9 +98,6 @@ router.get('/', async (req, res) => {
                         budget += role.salary
                     })
                 }
-                else {
-                    budget = 0;
-                }
             })
             console.log(magenta(`\nThis departments total budget is ${green("$" + budget)}\n`));
             await fetch(`${fetchString}/api/questions`) 

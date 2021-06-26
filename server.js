@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-sequelize.sync({force: false}).then(() => {
+sequelize.sync({force: true}).then(() => {
     var listener = app.listen(PORT, async () => {
         console.log("Listening!")
         let listeningPort = await listener.address().port;
