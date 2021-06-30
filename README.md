@@ -35,6 +35,10 @@
   To begin building your database, you should start by adding a department. From here, you can add roles and assign them to that department. After that, you can add your employees to the roles. All data will be linked accordingly down the tree.
   
   Note: When a Role or Department is deleted, all child roles, employees are deleted as well to save database space. Be careful when deleting parent objects.
+  
+  ## Video Demo
+  
+  Link to a video demonstration of this app can be found [HERE](https://drive.google.com/file/d/1wRpU36IDdVjKcVgoPZo_NzKD2KO77TJ3/view)
 
   ## Questions
   
